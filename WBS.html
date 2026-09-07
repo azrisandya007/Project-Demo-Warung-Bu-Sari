@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Bu Sari</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Tailwind (utility classes) — loaded BEFORE style.css so our custom
+         CSS wins on any overlapping property. Use Tailwind for quick
+         spacing/layout tweaks; keep bespoke components (navbar, loader,
+         dark mode, logo, cards) in style.css. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wbsdark: '#111827',
+                        wbsamber: '#f59e0b',
+                        wbspink: '#ec4899',
+                        wbsorange: '#c2410c'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-site="wbs">
+
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<header class="header">
+    <nav class="navbar">
+        <a href="#" class="logo brand-wbs">
+            <span class="brand-icon"><i class="fa-solid fa-bowl-food text-1xl relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-amber-700 after:transition-all after:duration-300 hover:after:w-full md: font-bold text-2xl relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-amber-700 after:transition-all after:duration-300 hover:after:w-full"></i></span>
+            <span class="brand-warung relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-amber-700 after:transition-all after:duration-300 hover:after:w-full">Warung</span><span class="brand-bu relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-amber-700 after:transition-all after:duration-300 hover:after:w-full">Bu</span><span class="brand-sari  relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-amber-700 after:transition-all after:duration-300 hover:after:w-full">Sari</span>
+        </a>
+
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button id="theme-btn"><i class="fa-solid fa-moon"></i></button>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-text">
+        <p class="hero-top">🍽️ Selamat datang di</p>
+        <h1>Warung Bu Sari</h1>
+        <h2><span id="typing" data-words="Masakan Rumahan, Rasa Rindu Kampung, Selalu Anget & Segar"></span></h2>
+        <p class="hero-desc">
+            Warung makan sederhana dengan cita rasa rumahan, bahan segar setiap hari,
+            dan harga yang bersahabat buat siapa saja.
+        </p>
+        <div class="hero-buttons">
+            <a href="#menu" class="btn primary">Lihat Menu</a>
+            <a href="#contact" class="btn secondary">Hubungi Kami</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="icon-frame"><i class="fa-solid fa-bowl-food "></i></div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2 class="section-title">Tentang Kami</h2>
+
+    <div class="about-container">
+        <div class="about-image">
+            <div class="icon-frame"><i class="fa-solid fa-kitchen-set"></i></div>
+        </div>
+
+        <div class="about-content">
+            <h3>Dari Dapur Rumah ke Meja Kamu</h3>
+            <p>
+                Warung Bu Sari berawal dari dapur kecil yang memasak untuk tetangga
+                sekitar, dan sekarang jadi tempat makan langganan buat yang kangen
+                masakan rumahan. Setiap menu dimasak fresh tiap hari pakai bumbu asli,
+                tanpa micin berlebihan, dan porsi yang bikin kenyang.
+            </p>
+
+            <div class="about-info">
+                <div><strong>Pemilik</strong><span>Bu Sari</span></div>
+                <div><strong>Berdiri</strong><span>Sejak 2015</span></div>
+                <div><strong>Lokasi</strong><span>Indramayu, Jawa Barat</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="menu" class="section">
+    <h2 class="section-title">Menu Andalan</h2>
+
+    <div class="project-grid">
+        <div class="project-card">
+            <div class="card-icon"><i class="fa-solid fa-drumstick-bite"></i></div>
+            <div class="project-content">
+                <div class="flex items-center gap-2 mb-2">
+                    <h3 class="mb-0!">Ayam Bakar Sambal Kecap</h3>
+                    <span class="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-0.5 rounded-full hover:bg-gray-900">Populer</span>
+                </div>
+                <p>Ayam kampung bakar dengan sambal kecap khas, disajikan hangat dengan lalapan.</p>
+                <span class="price">Rp15.000</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="card-icon"><i class="fa-solid fa-bowl-rice"></i></div>
+            <div class="project-content">
+                <h3>Nasi Goreng Kampung</h3>
+                <p>Nasi goreng bumbu rumahan dengan telur mata sapi dan kerupuk.</p>
+                <span class="price">Rp13.000</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="card-icon"><i class="fa-solid fa-fish"></i></div>
+            <div class="project-content">
+                <h3>Pindang Ikan Segar</h3>
+                <p>Kuah pindang asam segar dengan ikan pilihan hari itu.</p>
+                <span class="price">Rp16.000</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2 class="section-title">Kontak</h2>
+
+    <div class="contact-container">
+        <a href="https://wa.me/62000000000" target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+        <a href="https://instagram.com/shazzari_13" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i>Lihat Lokasi</a>
+    </div>
+</section>
+
+<footer>© 2026 Warung Bu Sari. All Rights Reserved.</footer>
+
+<button id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
